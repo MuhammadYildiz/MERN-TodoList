@@ -33,7 +33,7 @@ export default function Home() {
                     <div><h2 className="text-white">No Todos.....</h2></div> :
                     todos.map((todo) => {
                         return (
-                            <div key={todo._id} className="text-start m-2 bg-sky-700 text-white   flex items-center justify-between " >
+                            <div key={todo._id} className="text-start m-2 bg-sky-700 text-white rounded-sm  flex items-center justify-between " >
                                 <div className=" flex items-center basis-[90%] cursor-pointer hover:bg-sky-900  p-2 border-r" onClick={() => handleEdit(todo._id)}>
                                     <i className={`fa-regular fa-circle mr-2  rounded-full ${!todo.done ? "bg-white " :"bg-red-600"}`}></i>
                                     <p className={` ${!todo.done ? "" : "line-through text-black"}`}> {todo.newItem} </p>
